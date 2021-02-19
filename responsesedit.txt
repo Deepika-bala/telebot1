@@ -1,0 +1,21 @@
+import datetime
+def sample_responses(input_text):
+    user_message = str(input_text).lower()
+
+    if user_message in ("hello","hi"):
+        return "hey!WELCOME to Madurai startup"
+    if user_message in ("i am looking for co-working space in madurai?","looking for office at madurai"):
+        return "yes,We offer a Floating work place from 400 rs per day,Do you want to book?"
+    if user_message in ("i want to book","i don't want to book"):
+        return "i will show what we have,How many people do you have on a team"
+    if user_message in ("4","5","6"):
+        return "We have offices from 4 people ,show you the offices for 4 or talk about co working"
+    if user_message in("office","co_working"):
+        return "okay,we will discuss in call"
+    if user_message in ("time","time?"):
+        now = datetime.datetime.now()
+        date_time = now.strftime("%d/%m/%y, %H:%M:%S")
+
+        return str(date_time)
+
+    return "okay,will check and contact you later"
